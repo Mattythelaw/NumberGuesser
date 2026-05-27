@@ -11,7 +11,11 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
+    //Generating a random number between 1 and 100//
     val randomNumber = (1..100).random()
+
+    //Variable that stores the number of guesses that the player has made//
+    val guessCount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
