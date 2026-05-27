@@ -34,6 +34,15 @@ class MainActivity : AppCompatActivity() {
 
             //Calling the number the user entered//
             val guess = txtResult.text.toString().toInt()
+
+            //Checking the guessed number with the random numbers//
+            when {
+                guess == randomNumber -> txtResult.text = "Correct! The number was $randomNumber!"
+                guess < randomNumber  -> txtResult.text = "Try a higher number!"
+                guess > randomNumber  -> txtResult.text = " Try a lower number!"
+            }
+            //
+            edtNum.text.clear()
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
