@@ -23,6 +23,15 @@ class MainActivity : AppCompatActivity() {
         val btnGuess = findViewById<Button>(R.id.btnGuess)
         val txtResult = findViewById<TextView>(R.id.txtResult)
 
+        //Setting a button setOnClickListener//
+        btnGuess.setOnClickListener {
+
+            //Checking of the input is empty//
+            if (edtNum.text.isEmpty()) {
+                txtResult.text = "Please enter a number"
+            }
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
