@@ -29,7 +29,11 @@ class MainActivity : AppCompatActivity() {
             //Checking of the input is empty//
             if (edtNum.text.isEmpty()) {
                 txtResult.text = "Please enter a number"
+                return@setOnClickListener
             }
+
+            //Calling the number the user entered//
+            val guess = txtResult.text.toString().toInt()
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
