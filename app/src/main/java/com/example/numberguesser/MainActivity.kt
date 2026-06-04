@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     val randomNumber = (1..100).random()
 
     //Variable that stores the number of guesses that the player has made//
-    val guessCount = 0
+    var guessCount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
