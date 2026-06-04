@@ -60,7 +60,8 @@ class MainActivity : AppCompatActivity() {
                     //Disabling button so that user no longer keeps playing after losing//
                     btnGuess.isEnabled = false
                 }
-                
+                guess < randomNumber -> txtResult.text = "Try a highnumber!($remaining guesses left"
+                guess > randomNumber -> txtResult.text = "Try a lowernumber!($remaining guesses left"
             }
             //
             edtNum.text.clear()
