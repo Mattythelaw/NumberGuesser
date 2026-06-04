@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             //Calling the number the user entered//
-            val guess = txtResult.text.toString().toInt()
+            val guess = edtNum.text.toString().toInt()
 
             //Incrementing the guess counter every time the button is clicked//
             guessCount++
