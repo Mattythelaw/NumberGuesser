@@ -54,18 +54,22 @@ class MainActivity : AppCompatActivity() {
                     //Disabling the button so that the user no longer guesses after winning//
                     btnGuess.isEnabled = false
                 }
+
                 guessCount >= 5 -> {
                     //User has used all 5 guesses without guessing correctly//
                     txtResult.text = "You lose! The correct number was $randomNumber"
                     //Disabling button so that user no longer keeps playing after losing//
                     btnGuess.isEnabled = false
                 }
+
                 guess < randomNumber -> txtResult.text = "Try a highnumber!($remaining guesses left"
-                guess > randomNumber -> txtResult.text = "Try a lowernumber!($remaining guesses left"
+                guess > randomNumber -> txtResult.text =
+                    "Try a lowernumber!($remaining guesses left"
             }
-            //
+            //This is to clear EditText for the next guess//
             edtNum.text.clear()
         }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
