@@ -42,6 +42,9 @@ class MainActivity : AppCompatActivity() {
             //Incrementing the guess counter every time the button is clicked//
             guessCount++
 
+            //Calculating remaining guesses//
+            val remaining = 5 - guessCount
+
             //Checking the guessed number with the random numbers//
             when {
                 guess == randomNumber -> txtResult.text = "Correct! The number was $randomNumber!"
