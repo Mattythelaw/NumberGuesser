@@ -56,8 +56,11 @@ class MainActivity : AppCompatActivity() {
                 }
                 guessCount >= 5 -> {
                     //User has used all 5 guesses without guessing correctly//
-                    
+                    txtResult.text = "You lose! The correct number was $randomNumber"
+                    //Disabling button so that user no longer keeps playing after losing//
+                    btnGuess.isEnabled = false
                 }
+                
             }
             //
             edtNum.text.clear()
