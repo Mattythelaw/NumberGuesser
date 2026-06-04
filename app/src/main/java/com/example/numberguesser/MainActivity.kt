@@ -47,9 +47,17 @@ class MainActivity : AppCompatActivity() {
 
             //Checking the guessed number with the random numbers//
             when {
-                guess == randomNumber -> txtResult.text = "Correct! The number was $randomNumber!"
-                guess < randomNumber  -> txtResult.text = "Try a higher number!"
-                guess > randomNumber  -> txtResult.text = " Try a lower number!"
+                guess == randomNumber -> {
+                    //If player guesses correctly//
+                    txtResult.text = "Correct! The number was $randomNumber! You guessed it in " +
+                            "$guessCount guesses!"
+                    //Disabling the button so that the user no longer guesses after winning//
+                    btnGuess.isEnabled = false
+                }
+                guessCount >= 5 -> {
+                    //User has used all 5 guesses without guessing correctly//
+                    
+                }
             }
             //
             edtNum.text.clear()
